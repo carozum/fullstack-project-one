@@ -4,8 +4,7 @@
   "description": "This is the repository for the LinkedIn Learning course Learning Full-Stack JavaScript Development: MongoDB, Node, and React. The full course is available from [LinkedIn Learning][lil-course-url].",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "tscV": "tsc -v"
+    "dev:server": "tsnd src/server/server.ts"
   },
   "repository": {
     "type": "git",
@@ -18,6 +17,12 @@
   },
   "homepage": "https://github.com/LinkedInLearning/learning-full-stack-javascript-development-mongodb-node-and-react-2424660#readme",
   "dependencies": {
+    "express": "^4.18.2",
     "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.41.0",
+    "prettier": "^2.8.8",
+    "ts-node-dev": "^2.0.0"
   }
 }
