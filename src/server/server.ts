@@ -1,5 +1,7 @@
 import express from "express";
-console.log(express);
+import config, {PORT} from "./config";
+
+// console.log(express);
 const server = express();
 
 // templating
@@ -15,6 +17,8 @@ server.use("/", (req, res) =>{
 })
 
 // listen to requests on port 8080 and IP host 0.0.0.0
-server.listen(8080 , "0.0.0.0", ()=>{
-    console.info("express is listening at http://0.0.0.0:8080");
+server.listen(parseInt(config.PORT) , config.HOST, ()=>{
+    console.info(`express is listening at ${config.SERVER_URL}`);
+    // console.log(config);
+    // console.log({PORT});
 });
